@@ -27,4 +27,9 @@ export class WidgetsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  selectWidget(widget) {
+    // console.log(widget);
+    this.currentWidget = widget;
+  }
 }

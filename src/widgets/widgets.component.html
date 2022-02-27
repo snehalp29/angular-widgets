@@ -1,6 +1,17 @@
-<p>Widget Works</p>
-<mat-selection-list [multiple]="false">
-  <mat-list-item *ngFor="let widget of Widgets">
-    {{ widget | json }}
-  </mat-list-item>
-</mat-selection-list>
+<mat-card>
+  <mat-card-title> Test Title </mat-card-title>
+  <mat-card-content
+    ><mat-list>
+      <mat-list-item
+        *ngFor="let widget of Widgets"
+        (click)="selectWidget(widget)"
+      >
+        <!-- {{ widget | json }} -->
+        <div>{{ widget.Title }}</div>
+        <div>{{ widget.Description }}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<p>Option selected: {{ currentWidget?.Title }}</p>
