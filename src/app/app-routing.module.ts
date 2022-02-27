@@ -5,8 +5,8 @@ import { WidgetsComponent } from '../widgets/widgets.component';
 import { HomeComponent } from '../home/home.component';
 
 const routes: Route[] = [
-  { path: '', component: HomeComponent },
-  { path: 'widgets', component: WidgetsComponent },
+  // { path: '', component: HomeComponent },
+  { path: '', component: WidgetsComponent },
   { path: '**', redirectTo: '/' },
 ];
 

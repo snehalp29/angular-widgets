@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { WidgetsComponent } from '../widgets/widgets.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MaterailModule } from '../material.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, MaterailModule, AppRoutingModule],
   declarations: [AppComponent, HelloComponent, WidgetsComponent],
   bootstrap: [AppComponent],
 })

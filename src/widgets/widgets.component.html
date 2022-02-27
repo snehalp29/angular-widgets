@@ -1,1 +1,6 @@
 <p>Widget Works</p>
+<mat-selection-list [multiple]="false">
+  <mat-list-item *ngFor="let widget of Widgets">
+    {{ widget | json }}
+  </mat-list-item>
+</mat-selection-list>
