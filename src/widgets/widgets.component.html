@@ -1,18 +1,5 @@
-<mat-card>
-  <mat-card-title> Test Title </mat-card-title>
-  <mat-card-content
-    ><mat-list>
-      <mat-list-item
-        class="mat-list-option"
-        *ngFor="let widget of Widgets"
-        (click)="selectWidget(widget)"
-      >
-        <!-- {{ widget | json }} -->
-        <span matLine>{{ widget.Title }}</span>
-        <span matLine>{{ widget.Description }}</span>
-      </mat-list-item>
-    </mat-list>
-  </mat-card-content>
-</mat-card>
-
+<app-widgets-list
+  [widgets]="Widgets$"
+  (selected)="onSelected($event)"
+></app-widgets-list>
 <p>Option selected: {{ currentWidget?.Title }}</p>

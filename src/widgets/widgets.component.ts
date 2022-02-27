@@ -7,18 +7,18 @@ import { Widget } from '../app-interfaces';
   styleUrls: ['./widgets.component.css'],
 })
 export class WidgetsComponent implements OnInit {
-  Widgets: Widget[] = [
+  Widgets$: Widget[] = [
     {
       id: '1',
       Title: 'Title_1',
-      Description: 'Description_2',
-      email: 'email_1@p.com',
+      Description: 'Description_1',
+      Email: 'email_1@p.com',
     },
     {
       id: '2',
       Title: 'Title_2',
       Description: 'Description_2',
-      email: 'email_2@p.com',
+      Email: 'email_2@p.com',
     },
   ];
 
@@ -28,8 +28,7 @@ export class WidgetsComponent implements OnInit {
 
   ngOnInit() {}
 
-  selectWidget(widget) {
-    // console.log(widget);
-    this.currentWidget = widget;
+  onSelected(selectedWidget: Widget) {
+    this.currentWidget = selectedWidget;
   }
 }

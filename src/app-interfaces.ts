@@ -5,5 +5,5 @@ class BaseEntity {
 export class Widget extends BaseEntity {
   Title: string;
   Description: string;
-  email: string;
+  Email: string;
 }
