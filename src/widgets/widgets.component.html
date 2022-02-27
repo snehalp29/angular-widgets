@@ -3,12 +3,13 @@
   <mat-card-content
     ><mat-list>
       <mat-list-item
+        class="mat-list-option"
         *ngFor="let widget of Widgets"
         (click)="selectWidget(widget)"
       >
         <!-- {{ widget | json }} -->
-        <div>{{ widget.Title }}</div>
-        <div>{{ widget.Description }}</div>
+        <span matLine>{{ widget.Title }}</span>
+        <span matLine>{{ widget.Description }}</span>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
