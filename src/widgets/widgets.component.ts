@@ -22,13 +22,13 @@ export class WidgetsComponent implements OnInit {
     },
   ];
 
-  currentWidget: Widget = null;
+  selectedWidget$: Widget = null;
 
   constructor() {}
 
   ngOnInit() {}
 
   onSelected(selectedWidget: Widget) {
-    this.currentWidget = selectedWidget;
+    this.selectedWidget$ = selectedWidget;
   }
 }

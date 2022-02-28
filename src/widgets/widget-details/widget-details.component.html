@@ -1,3 +1,11 @@
-<p>
-widget-details works!
-</p>
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="currentWidget.id; else elseBlock">
+      Editing {{ originalTitle }}
+    </span>
+    <ng-template #elseBlock> Select Widget </ng-template>
+  </mat-card-title>
+  <mat-card-content>
+    <form #wForm="ngForm"></form>
+  </mat-card-content>
+</mat-card>

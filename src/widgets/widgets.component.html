@@ -1,5 +1,9 @@
-<app-widgets-list
-  [widgets]="Widgets$"
-  (selected)="onSelected($event)"
-></app-widgets-list>
-<p>Option selected: {{ currentWidget?.Title }}</p>
+<div class="component-container">
+  <div class="list-component">
+    <app-widgets-list [widgets]="Widgets$" (selected)="onSelected($event)">
+    </app-widgets-list>
+  </div>
+  <div class="details-component">
+    <app-widget-details [widget]="selectedWidget$"> </app-widget-details>
+  </div>
+</div>
